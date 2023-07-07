@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+<div id ="header">
+  <div class="container">
+    <nav>
+      <img src="img/logo_12.webp" class="logo" alt="">
+      <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#Portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fa fa-times" aria-hidden="true" onclick="closeMenu()"></i>
+
+      </ul>
+      <i class="fa fa-bars" aria-hidden="true" onclick="openMenu()"></i>
+    </nav>
+<div class="header-text">
+  <p>Front End Developer</p>
+  <h1>Hi, I'm <span> Brahmeshwar</span> <br> Thakur From India</h1>
+
+</div>
+  </div>
+
+</div>
+<!---about------------>
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="img/user.jpg" alt="">
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>I am a 3rd Year Engineering student Pursuing Bachelor of Technology in Information  Technology stream from Bharati Vidyapeeth (Deemed to be University) College of Engineering, Pune with  an Average CGPA 9.2(*till 4th sem) </p>
+    <div class="tab-titles">
+      <p class="tab-links active-link" onClick="opentab('skills')">Skills</p>
+      <p class="tab-links" onClick="opentab('experience')">Experience</p>
+      <p class="tab-links" onClick="opentab('education')">Education</p>
+    </div>
+    <div class="tab-contents active-tab" id="skills">
+<ul>
+  <li> <span>Front End</span> <br> HTML <br>JAVA SCRIPT <br>CSS <br> REACT </li>
+  <li> <span>Back End</span> <br> NODE JS <br>EXPRESS JS <br>MONGO DB </li>
+
+</ul>
+    </div>
+
+    <div class="tab-contents" id="experience">
+<ul>
+  <li> <span>none</span> <br> HTML <br>JAVA SCRIPT <br>CSS <br> REACT </li>
+  <li> <span>none</span> <br> NODE JS <br>EXPRESS JS <br>MONGO DB </li>
+
+</ul>
+    </div>
+    <div class="tab-contents" id="education">
+<ul>
+  <li> <span>2020-2024</span> <br> BHARTI VIDYAPEETH COLLEGE OF ENGINEERINF,PUNE <br>INFORMATION TECHNOLOGY </li>
+
+
+</ul>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---Portfolio------------>
+<div id="Portfolio">
+  <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="img/work1.jpg">
+          <div class="layer">
+            <h3>My Secret App </h3>
+            <p>This website allows you to share your and read Secrets anonymously</p>
+            <a href=""><i class="fa fa-external-link" aria-hidden="true"></i></a>
+
+          </div>
+          </div>
+          <div class="work">
+            <img src="img/work2.jpg">
+            <div class="layer">
+              <h3>To-Do List </h3>
+              <p>This website allows you to complete your day to day tasks</p>
+              <a href=""><i class="fa fa-external-link" aria-hidden="true"></i></a>
+
+            </div>
+            </div>
+            <div class="work">
+              <img src="img/work3.jpg">
+              <div class="layer">
+                <h3>Connect4 Game </h3>
+                <p>This website allows you play your childhood game of connecting four dots first on Web</p>
+                <a href=""><i class="fa fa-external-link" aria-hidden="true"></i></a>
+
+              </div>
+              </div>
+
+      </div>
+  </div>
+</div>
+<!---contact----------->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p> <i class="fa fa-paper-plane" aria-hidden="true"></i> brahmeshwarthakur1@gmail.com</p>
+        <p> <i class="fa fa-phone-square" aria-hidden="true"></i> +91 8809334834</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href="https://mail.google.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+
+        </div>
+        <a href="img/NResume.pdf" Download class="btn btn2">Download CV</a>
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet" >
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2" name="Submit">Submit</button>
+
+        </form>
+        <span id="msg"></span>
+
+      </div>
+
+    </div>
+
+  </div>
+<div class="copyright">
+  <p>copyright @BT Made with <i class="fa fa-heart" aria-hidden="true"></i> by Brahmeshwar Thakur</p>
+
+</div>
+</div>
+<script>
+var tablinks=document.getElementsByClassName("tab-links");
+var tabcontents=document.getElementsByClassName("tab-contents");
+function opentab(tabname) {
+  for(tablink of tablinks){
+    tablink.classList.remove("active-link");
+  }
+  for(tabcontent of tabcontents){
+    tabcontent.classList.remove("active-tab");
+  }
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab")
+
+}
+
+</script>
+<script>
+var sidemenu=document.getElementById("sidemenu");
+function openMenu() {
+  sidemenu.style.right="0";
+}
+function closeMenu() {
+  sidemenu.style.right="-250px";
+}
+
+</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzsBiZdcCSOamBjmNNyGOFWwrqGSTUvcgY2Mzf2cRNphhq3_lSMAmPU6Cl66srw-wDH/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg= document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML="Message sent sucessfully"
+        setTimeout(function () {
+          msg.innerHTML=""
+
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+  </body>
+</html>
